@@ -1,101 +1,132 @@
-Chatbot for CDP Documentation
-=============================
-![CDP Chatbot Screenshot](images/image.png)
-![CDP Chatbot Screenshot 1](images/screenshort1.png)
-![CDP Chatbot Screenshot 2](images/ss2.png)
-**Overview:**
+# Chatbot for CDP Documentation
 
-This project provides a chatbot capable of answering questions related to four Customer Data Platform (CDP) documentations: Segment, mParticle, Lytics, and Zeotap. The chatbot retrieves relevant information from these documentations to assist users with their queries.
+## Overview
 
-Requirements
-------------
+This project is a chatbot designed to assist users with queries related to four Customer Data Platform (CDP) documentations: **Segment, mParticle, Lytics, and Zeotap**. The chatbot retrieves relevant information from these documentations to provide accurate responses.
 
-*   Python 3.7 or higher
-*   pip (Python package installer)
-*   Flask
-*   BeautifulSoup4
-*   requests
-*   sentence-transformers
-*   PyTorch
+### Source Acknowledgment
 
-Installation Steps
-------------------
+This project is adapted from [Hitank Shah's Chatbot for CDP Documentation](https://github.com/hitankshah/Chatbot-for-CDP-Documentation-). The implementation has been modified and extended to meet specific requirements.
 
-**1\. Clone the Repository**
+## Requirements
 
-git clonehttps://github.com/hitankshah/Chatbot-for-CDP-Documentation-
+Ensure you have the following dependencies installed before running the project:
 
+- Python 3.7 or higher
+- pip (Python package installer)
+- Flask
+- BeautifulSoup4
+- requests
+- sentence-transformers
+- PyTorch
 
-cd Chatbot-for-CDP-Documentation-
-    
+## Installation Steps
 
-**2\. Create a Virtual Environment (Optional but recommended)**
+1. **Clone the Repository**
 
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\\Scripts\\activate
-    
+   ```sh
+   git clone https://github.com/hitankshah/Chatbot-for-CDP-Documentation-
+   cd Chatbot-for-CDP-Documentation-
+   ```
 
-**3\. Upgrade pip**
+2. **Create a Virtual Environment (Recommended)**
 
-python -m pip install --upgrade pip
-    
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-**4\. Install Dependencies**
+3. **Upgrade pip**
 
-pip install flask beautifulsoup4 requests sentence-transformers torch==2.4.1 torchvision==0.19.1  
-or 
-pip install -r requirements.txt
+   ```sh
+   python -m pip install --upgrade pip
+   ```
 
-**5\. Run the Application**
+4. **Install Dependencies**
 
-python app.py
-    
+   ```sh
+   pip install flask beautifulsoup4 requests sentence-transformers torch==2.4.1 torchvision==0.19.1
+   ```
 
-The application will be accessible at **http://localhost:5000**.
+   *Or install from requirements file:*
 
-Configuration
--------------
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-**Documentation URLs:** The chatbot uses the following URLs to fetch documentation content:
+5. **Run the Application**
 
-*   Segment Documentation: [https://segment.com/docs/?ref=nav](https://segment.com/docs/?ref=nav)
-*   mParticle Documentation: [https://docs.mparticle.com/](https://docs.mparticle.com/)
-*   Lytics Documentation: [https://docs.lytics.com/](https://docs.lytics.com/)
-*   Zeotap Documentation: [https://docs.zeotap.com/home/en-us](https://docs.zeotap.com/home/en-us)
+   ```sh
+   python app.py
+   ```
 
-Usage
------
+   The application will be accessible at [**http://localhost:5000**](http://localhost:5000).
 
-**UI Access:** Visit [http://localhost:5000](http://localhost:5000) to interact with the chatbot.
+## Configuration
 
-**API Endpoint:** You can also make POST requests to /ask with a JSON payload containing the user's query.
+The chatbot retrieves documentation from the following URLs:
 
-### Example Queries
+- **Segment**: [https://segment.com/docs/?ref=nav](https://segment.com/docs/?ref=nav)
+- **mParticle**: [https://docs.mparticle.com/](https://docs.mparticle.com/)
+- **Lytics**: [https://docs.lytics.com/](https://docs.lytics.com/)
+- **Zeotap**: [https://docs.zeotap.com/home/en-us](https://docs.zeotap.com/home/en-us)
 
-*   "How do I set up a new source in Segment?"
-*   "How can I create a user profile in mParticle?"
-*   "How do I build an audience segment in Lytics?"
-*   "How can I integrate my data with Zeotap?"
+## Usage
 
-Handling Variations
--------------------
+### UI Access
 
-The chatbot can handle variations in question phrasing and respond to both specific and general queries related to the supported CDPs.
+Visit [**http://localhost:5000**](http://localhost:5000) to interact with the chatbot.
 
-Advanced Features
------------------
+### API Endpoint
 
-*   **Cross-CDP Comparisons:** The chatbot can compare functionalities across different CDPs, e.g., "How does Segment's audience creation process compare to Lytics'?"
-*   **Complex Queries:** It supports advanced queries on configurations and integrations.
+You can also make a **POST request** to `/ask` with a JSON payload containing the user's query.
 
-Troubleshooting
----------------
+#### Example Queries
 
-**ModuleNotFoundError:** Ensure all dependencies are installed correctly. Reinstall pip or packages if necessary.
+- *"How do I set up a new source in Segment?"*
+- *"How can I create a user profile in mParticle?"*
+- *"How do I build an audience segment in Lytics?"*
+- *"How can I integrate my data with Zeotap?"*
 
-**Version Conflicts:** Verify the compatibility of torch and torchvision if using different versions.
+## Features
 
-License
--------
+### Handling Variations
+
+The chatbot can process different phrasings of the same question and provide accurate responses based on the relevant CDP documentation.
+
+### Advanced Capabilities
+
+- **Cross-CDP Comparisons**: It can compare features across different CDPs, e.g., *"How does Segment's audience creation process compare to Lytics'?"*
+- **Complex Queries**: Supports advanced questions regarding configurations and integrations.
+
+## Implementation Details
+
+### Tech Stack
+
+- **Programming Language**: Python
+- **Framework**: Flask for backend API
+- **NLP Libraries**: Sentence-Transformers for semantic understanding
+- **Web Scraping**: BeautifulSoup4 and Requests for fetching documentation data
+- **Deep Learning Framework**: PyTorch for processing queries with sentence embeddings
+
+### Data Structures Used
+
+- **Trie**: For efficiently storing and searching frequently asked questions
+- **HashMaps**: Used for quick lookups of documentation content
+- **Embedding-based Search**: Converts user queries and documentation into vector representations for similarity matching
+
+### Deployment Strategy
+
+- **Local Deployment**: Runs on `http://localhost:5000` during development
+- **Cloud Deployment (Optional)**: Can be deployed to cloud services like AWS, Heroku, or GCP for broader access
+- **Docker Support (Future Enhancement)**: Containerizing the application for consistent deployment environments
+
+## Troubleshooting
+
+- **ModuleNotFoundError**: Ensure all dependencies are installed correctly. Try reinstalling `pip` or the required packages.
+- **Version Conflicts**: If experiencing compatibility issues with `torch` and `torchvision`, verify the installed versions match the recommended ones.
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
