@@ -1,0 +1,8 @@
+flask
+beautifulsoup4
+requests
+sentence-transformers
+torch
+torchvision
+logging
+gunicorn
