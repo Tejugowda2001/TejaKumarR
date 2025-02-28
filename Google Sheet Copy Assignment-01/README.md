@@ -2,6 +2,7 @@
 
 ## Project Overview
 This project aims to develop a web application that replicates the core functionalities of Google Sheets. The focus is on implementing essential spreadsheet features such as mathematical functions, data quality operations, efficient data entry, and user interactions.
+## [Live Demo](https://xlsheets.netlify.app)
 
 ## Features Implemented
 ### Spreadsheet Interface
