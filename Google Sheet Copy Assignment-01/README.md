@@ -1,54 +1,62 @@
-# XlSheets App
+# Web Application Mimicking Google Sheets
 
-## [Live Demo](https://xlsheets.netlify.app)
+## Project Overview
+This project aims to develop a web application that replicates the core functionalities of Google Sheets. The focus is on implementing essential spreadsheet features such as mathematical functions, data quality operations, efficient data entry, and user interactions.
 
-## Description
+## Features Implemented
+### Spreadsheet Interface
+- Basic UI resembling Google Sheets
+- Structured cell-based layout with basic formatting
+- Support for cell selection and data input
 
-A simple Google Sheets clone application that mimics the same behavior of calculating numbers and expressions based on different inputs using cells. It was built using ReactJS, Recoil and MathJs libraries.
+### Mathematical Functions
+- **SUM Function**: Calculates the sum of a given range of numerical values
 
-## YouTube Video
+## Features in Progress / To Be Implemented
+### Spreadsheet Enhancements
+- Drag functionalities for cell selection and content manipulation
+- Cell dependencies to dynamically update formula-based calculations
+- Row and column operations (insertion, deletion, resizing)
 
-[![Using Recoil, React and Mathjs to build a simple Google Sheets clone](http://img.youtube.com/vi/ywOUEBUM0pY/0.jpg)](http://www.youtube.com/watch?v=ywOUEBUM0pY "Using Recoil, React and Mathjs to build a simple Google Sheets clone")
+### Mathematical Functions
+- **AVERAGE, MAX, MIN, COUNT** functions
 
-## Available Scripts
+### Data Quality Functions
+- **TRIM, UPPER, LOWER, REMOVE_DUPLICATES, FIND_AND_REPLACE**
 
-In the project directory, you can run:
+### Data Entry and Validation
+- Establish stricter validation mechanisms for different data types
 
-### `yarn start`
+### Testing Mechanism
+- Implement structured testing for function validation with user data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+- **Frontend**: HTML, CSS, JavaScript
+- **Libraries**: SheetJS, Handsontable (for potential future implementation)
+- **Backend (Planned Enhancements)**: Node.js / Flask
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Tejugowda2001/Zeotap.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Zeotap
+   ```
+3. Open `index.html` in a browser to view the application.
 
-### `yarn test`
+## Next Steps
+- Gain proficiency in **JavaScript frameworks** like React or Vue
+- Implement **saving/loading functionality** for spreadsheet persistence
+- Enhance **UI/UX** for a seamless Google Sheets-like experience
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contribution
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-### `yarn build`
+## Author
+**Teja Kumar R**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
+This project is licensed under the MIT License.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
